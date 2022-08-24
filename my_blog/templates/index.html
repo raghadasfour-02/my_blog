@@ -2,9 +2,9 @@
 {% block content %}
 <style>
     body {
-        font-family: "Roboto", sans-serif;
+        font-family: Verdana;
         font-size: 18px;
-        background-color: #0a192f;
+        background-color: #FFFFFF;
     }
 
     .head_text {
@@ -12,7 +12,8 @@
     }
 
     .card {
-        box-shadow: 0 16px 55px #64ffda;
+        box-shadow: 0 16px 55px #FFFFFF;
+        outline: 1px solid #654321;
     }
 </style>
 
@@ -23,7 +24,7 @@
             <div class=" col-md-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h3 class=" site-heading my-4 mt-3 text-white"> Hey, I'm Raghad and I like to write sometimes. </h3>
-                    <p class="text-light"> Creative Dumps. Mediocre at best. &nbsp
+                    <p class="text-light"><i> creative dumps. mediocre at best. &nbsp</i>
                     </p>
                 </div>
             </div>
@@ -37,8 +38,8 @@
             {% for post in post_list %}
             <div class="card mb-2">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <h3 class="card-title">{{ post.title }}</h2>
+                    <p class="card-text text-muted h6">{{ post.created_on }} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
                 </div>
