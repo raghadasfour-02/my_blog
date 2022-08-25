@@ -15,6 +15,14 @@
         box-shadow: 0 16px 55px #FFFFFF;
         outline: 1px solid #654321;
     }
+    .btn {
+        color: #654321;
+    }
+    
+    .btn:hover {
+        color: #654321;
+        outline: 1px solid #654321;
+      }
 </style>
 
 <header class="masthead">
@@ -41,7 +49,7 @@
                     <h3 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6">{{ post.created_on }} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
-                    <a href="{% url 'post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                    <a href="{% url 'post_detail' post.slug  %}" class="btn">Read More &rarr;</a>
                 </div>
             </div>
             {% endfor %}
