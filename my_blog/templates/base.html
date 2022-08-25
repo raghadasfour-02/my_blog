@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-
+{% load static %}
 <html>
-    {% load static %}
     <head>
         <title>Django Central</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -13,9 +12,7 @@
     </head>
 
     <body>
-        {% load static %}
-{% load sweetify %}
-{% sweetify %}
+        
         <style>
             body {
             font-family: Verdana;
@@ -49,14 +46,20 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item text-black">
-                            <a class="nav-link text-black font-weight-bold" id="basicAlert"> about this project</a>
+                            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+                            <a class="nav-link text-black font-weight-bold" onclick="about_this_project_button()"> about this project</a>
                             <script>
-                                document.getElementById('basicAlert').addEventListener('click', function () {
-                                    alert(
-                                        'Basic alert',
-                                        'You clicked the button!'
-                                    )
-                                });
+                                function about_this_project_button() {
+                                    swal({
+                                        buttons: false,
+                                        title: 'About this Project',
+                                        text: 'This project was created to safekeep some of my creative writing.\n \nTools used: Django, Python' ,
+                                        content: el,
+                                    });
+                                }
+
+                            const el = document.createElement('div')
+                            el.innerHTML = "Checkout <a href='https://github.com/raghadasfour-02/my_blog'>Github repo</a> for more"
                             </script>
                         </li>
                     </ul>
