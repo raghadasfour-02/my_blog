@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'sweetify'
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
+SWEETIFY_SWEETALERT_LIBRARY = 'sweetalert2'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
